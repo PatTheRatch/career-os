@@ -1,0 +1,51 @@
+# My Philosophy on AI
+
+## I'm glad the thing I was good at is going away
+
+Early in my career, at KPMG, I taught myself VBA to kill a reconciliation task everyone hated. It worked a little too well. I remember thinking, half-joking, that I'd just automated a chunk of my own job away — and feeling weirdly great about it instead of nervous.
+
+That reaction never went away. For most of my career my edge was that I could write better SQL, better Python, better Tableau than the people around me. AI and is quietly dissolving that edge, and honestly? I'm relieved.
+
+I know most technical people feel the opposite. I get it. But I never really wanted to be valuable because I could type faster than the next person. I wanted to be valuable because I could walk into a room where everyone had accepted some slow, painful process as just "how it works" — and see that it didn't have to be. The typing was never the point. It was the toll I paid to get to the point.
+
+AI stops charging that toll. It moves the scarce skill from *making the thing* to *knowing which thing is worth making* — reading people, finding the friction they've stopped noticing, figuring out what actually deserves to exist. That was always the part I was best at. So when someone asks if AI worries me, my honest answer is that it finally lets me spend my time on the part I was good at anyway.
+
+---
+
+## Most AI work is a great demo nobody uses (and I've built a few)
+
+Here's something I don't hear people say enough: a lot of what we call "AI work" right now is a performance. A dazzling demo. A model name dropped like a designer label. Something that trends on a Thursday and that nobody has opened by the following Tuesday.
+
+And I'm not throwing stones from the outside — I've built that thing. I've presented something slick, gotten the nods around the table, and quietly stopped touching it a month later. It looked incredible in the room. It just never survived contact with an actual Tuesday.
+
+It took me a while to understand why. I used to think the problem was that the tech wasn't good enough yet. Then I thought maybe I hadn't explained it well enough. Neither was really it. The truth was simpler and more annoying: I'd built it to be *shown*, not *used*. The demo was the product. That's the trap, and it's an easy one to fall into because demos are so much more fun to make than the boring, invisible thing that actually earns a spot in someone's day.
+
+The best AI I've built does the opposite of a demo. It disappears. It never announces that it's AI. My favorite compliment on anything I've made wasn't "that's impressive" — it was a portfolio manager telling me he couldn't picture doing the job the old way anymore. He had no idea what was running underneath it, and that was exactly the point. He was too busy doing his actual work to care which model was in there.
+
+So I've stopped saying I want to build AI products. I want to build products that quietly get better because they use AI — and win *because* you never had to think about the AI at all.
+
+---
+
+## Building is just how I think
+
+People assume I build because I love writing code. I don't, really. I build because making something is the fastest way I've found to actually understand a problem. It's a bit like basketball — you can diagram a play on a whiteboard all day, but you don't know if it works until you run it and someone blows the coverage. Every prototype blows a coverage I didn't know was there. Every dead end quietly deletes a wrong path.
+
+This is where AI genuinely changed my life, and it's not the part people usually point to. An experiment that used to cost me two weeks now costs me an afternoon. Everyone frames that as "you can produce more code, faster." Sure. But that was never the exciting part to me. The exciting part is that I can now be wrong ten times before lunch and actually *know* something by dinner. AI didn't speed up my typing. It sped up my understanding. The code was never the output — the learning was.
+
+---
+
+## Start with what annoys people, not with what AI can do
+
+The usual starting question is "what can AI do now?" I think that's backwards, and it's why so much AI work ends up being a solution wandering around looking for a problem to attach itself to.
+
+I like to start somewhere much less glamorous: what quietly makes people miserable at work? What have they given up on ever fixing? Only once I understand *that* do I ask whether AI is even the right tool — and sometimes, honestly, it isn't. Sometimes the right answer is a spreadsheet, or deleting a step, or just a conversation. The technology is supposed to follow the problem. The moment you let it lead, you're back to building demos.
+
+---
+
+## What I'm actually trying to do
+
+If I'm honest about the long game, I want to be the person who notices the important problem before anyone's put a name to it — and who can build the small, ugly thing that proves it's real before the meeting about it even gets scheduled.
+
+Not to replace the experts. To get out of their way. To quietly delete the friction they'd accepted as the price of the job, so their attention lands where it should have been the whole time. When that works, the tool sort of vanishes into how people think, and after a while nobody remembers there was ever another way to do it.
+
+That's the kind of AI work I find worth doing. The impressive stuff is fun for an afternoon. This is the stuff people still use on a Tuesday.

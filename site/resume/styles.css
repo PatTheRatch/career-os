@@ -1,0 +1,404 @@
+/* ============================================================
+   Patrick McDowell — professional brand artifact
+   Screen + shared styles. Print overrides live in print.css.
+
+   Principles: typography is the design; hierarchy is the design;
+   whitespace is intentional; metrics over adjectives; products
+   over employers. Monochrome. One column. ATS-clean.
+   ============================================================ */
+
+:root {
+  --ink:        #0f0f0f;   /* primary                     */
+  --ink-soft:   #2b2b2b;   /* body prose                  */
+  --ink-muted:  #6c6c6c;   /* meta / secondary            */
+  --ink-faint:  #9b9b9b;   /* labels                      */
+  --ghost:      #e6e6e6;   /* oversized index numerals    */
+  --hairline:   #e5e5e5;
+  --rule:       #111111;
+  --paper:      #ffffff;
+
+  --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+  --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --track-indent: 3.5rem;  /* aligns secondary content under case bodies */
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: #ececea;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  line-height: 1.52;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.sheet {
+  max-width: 47rem;
+  margin: 3rem auto;
+  background: var(--paper);
+  padding: 4rem 4.25rem 2.75rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 14px 46px rgba(0,0,0,0.09);
+}
+
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hairline); }
+a:hover { border-bottom-color: var(--ink); }
+
+/* ============================================================
+   COVER
+   ============================================================ */
+.cover { margin-bottom: 2.75rem; }
+
+/* Masthead: name left, contact whisper-quiet top-right */
+.masthead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 2.75rem;
+}
+.name {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin: 0.15rem 0 0;
+}
+.contact {
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  color: var(--ink-muted);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+.contact a { color: var(--ink-muted); border-bottom: none; }
+.contact a:hover { color: var(--ink); }
+
+/* The brand. Everything supports this sentence. */
+.thesis {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 3.65rem;
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+  color: var(--ink);
+  margin: 0 0 2rem;
+  max-width: 15ch;
+  text-wrap: balance;
+}
+
+.discipline {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-muted);
+  margin: 0 0 1.1rem;
+}
+.discipline .sep { color: var(--hairline); padding: 0 0.35em; }
+
+/* Career throughline — one problem, increasingly powerful tools */
+.throughline {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  margin: 0 0 2rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.15rem 0.55rem;
+}
+.throughline .arrow { color: var(--ink-faint); }
+.throughline span:last-child { color: var(--ink); font-weight: 600; }
+
+.intro { max-width: 54ch; }
+.intro p { margin: 0 0 0.85rem; color: var(--ink-soft); }
+.intro p:last-child { margin-bottom: 0; }
+.prompt { font-style: italic; font-weight: 600; color: var(--ink); }
+
+/* ============================================================
+   SIGNALS — big numbers as anchors
+   ============================================================ */
+.signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.75rem;
+  margin: 0 0 0.5rem;
+  padding: 1.6rem 0;
+  border-top: 1.5px solid var(--rule);
+  border-bottom: 1px solid var(--hairline);
+}
+.signal { flex: 1 1 8rem; min-width: 7rem; }
+.figure {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin: 0 0 0.45rem;
+}
+.figure-label {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-muted);
+  margin: 0;
+  line-height: 1.3;
+}
+.figure-label .to { color: var(--ink-faint); padding: 0 0.1em; }
+
+/* ============================================================
+   CHAPTER HEADERS
+   ============================================================ */
+section { margin-top: 2.6rem; }
+
+.chapter {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid var(--rule);
+}
+.chapter .idx {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+.chapter h2 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+}
+.chapter .aside {
+  margin-left: auto;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+/* Appendix sections — deliberately quieter than the hero chapters */
+.chapter--minor {
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 1.1rem;
+}
+.chapter--minor h2 { color: var(--ink-muted); }
+
+/* ============================================================
+   SELECTED WORK
+   ============================================================ */
+.context { margin: 0 0 1.9rem; max-width: 60ch; }
+.context-lead {
+  display: block;
+  font-size: 1.28rem;
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.context-meta {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  margin-top: 0.55rem;
+}
+
+.case { margin-top: 2.7rem; }
+.case:first-of-type { margin-top: 1.5rem; }  /* flagship opens tight to its section thesis */
+.case-head { display: flex; align-items: flex-start; gap: 1.1rem; }
+.case-index {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--ghost);
+  flex: 0 0 auto;
+  min-width: 2.4rem;
+}
+.case-body { flex: 1 1 auto; }
+.case-title {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.42rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0.05rem 0 0;
+}
+.case-standfirst {
+  font-size: 1.02rem;
+  line-height: 1.44;
+  color: var(--ink-muted);
+  margin: 0.5rem 0 0;
+  max-width: 62ch;
+}
+
+ul.outcomes { list-style: none; margin: 0.8rem 0 0; padding: 0; }
+ul.outcomes li {
+  position: relative;
+  padding-left: 1.15rem;
+  margin: 0 0 0.34rem;
+  color: var(--ink-soft);
+  line-height: 1.44;
+  max-width: 66ch;
+}
+ul.outcomes li:last-child { margin-bottom: 0; }
+ul.outcomes li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0.1rem;
+  top: -0.03em;
+  color: var(--ink);
+  font-size: 0.82em;
+}
+
+/* ============================================================
+   WHERE HE BUILT — quiet secondary index
+   ============================================================ */
+.track { padding-left: var(--track-indent); }
+
+.stint { margin-top: 1.5rem; }
+.stint:first-child { margin-top: 0; }
+.stint-role {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.94rem;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  margin: 0;
+}
+.stint-meta {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  margin: 0.15rem 0 0;
+}
+.stint-summary {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: 0.5rem 0 0;
+  max-width: 64ch;
+}
+ul.mini { list-style: none; margin: 0.45rem 0 0; padding: 0; }
+ul.mini li {
+  position: relative;
+  padding-left: 1.05rem;
+  margin: 0 0 0.24rem;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  color: var(--ink-muted);
+  max-width: 66ch;
+}
+ul.mini li:last-child { margin-bottom: 0; }
+ul.mini li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0.1rem;
+  top: -0.02em;
+  color: var(--ink-faint);
+  font-size: 0.78em;
+}
+
+/* ============================================================
+   TOOLKIT
+   ============================================================ */
+.toolkit .tool-line {
+  margin: 0 0 0.6rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 64ch;
+}
+.toolkit .tool-line:last-child { margin-bottom: 0; }
+.tool-key {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+}
+.tool-key::after {
+  content: ":\2002";   /* colon + en-space */
+  font-style: normal;
+  color: var(--ink-faint);
+}
+
+/* ============================================================
+   EDUCATION
+   ============================================================ */
+.edu-school {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: var(--ink);
+  margin: 0;
+}
+.edu-degree { color: var(--ink-soft); margin: 0.1rem 0 0; }
+
+/* ============================================================
+   SIGN-OFF — the "Patrick moment"
+   The document closes with the question that opened his career;
+   the pages above are, quietly, the answer.
+   ============================================================ */
+.signoff {
+  margin-top: 2.75rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--hairline);
+}
+.signoff p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-muted);
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-align: right;
+}
+
+/* ============================================================
+   Small screens
+   ============================================================ */
+@media (max-width: 640px) {
+  .sheet { margin: 0; padding: 2.25rem 1.4rem 2.25rem; box-shadow: none; }
+  .masthead { flex-direction: column; gap: 0.75rem; }
+  .contact { text-align: left; }
+  .thesis { font-size: 2.4rem; max-width: none; }
+  .throughline { font-size: 0.64rem; }
+  .signals { gap: 1.25rem 1.5rem; }
+  .figure { font-size: 2.3rem; }
+  .case-head { gap: 0.75rem; }
+  .case-title { font-size: 1.25rem; }
+  .case-index { font-size: 1.8rem; min-width: 1.8rem; }
+  .track { padding-left: 0; }
+  .tool-key { display: block; min-width: 0; margin-bottom: 0.15rem; }
+}
