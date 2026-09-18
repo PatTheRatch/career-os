@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patrick McDowell | AI Product Engineer</title>
+<meta name="description" content="Patrick McDowell - AI Product Engineer building applied AI products and decision systems." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #111111;
+    --ink-soft: #2b2b2b;
+    --ink-muted: #666666;
+    --ink-faint: #929292;
+    --hairline: #dedede;
+    --paper: #ffffff;
+    --serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: #ececea;
+    color: var(--ink-soft);
+    font-family: var(--serif);
+    font-size: 0.92rem;
+    line-height: 1.43;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--hairline); }
+  .sheet {
+    width: min(52rem, calc(100% - 2rem));
+    margin: 3rem auto;
+    padding: 3.5rem 4rem 3rem;
+    background: var(--paper);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 14px 46px rgba(0,0,0,0.09);
+  }
+  .masthead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    align-items: start;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .name {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.65rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+  .headline {
+    margin: 0.3rem 0 0;
+    color: var(--ink-muted);
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+  }
+  .contact {
+    margin: 0;
+    color: var(--ink-muted);
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-style: normal;
+    line-height: 1.62;
+    text-align: right;
+  }
+  .contact span { display: block; }
+  .profile {
+    margin: 1.25rem 0 0;
+    max-width: 68ch;
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.48;
+  }
+  .section { margin-top: 1.55rem; }
+  .section-title {
+    display: flex;
+    gap: 0.7rem;
+    align-items: baseline;
+    margin: 0 0 0.9rem;
+    padding-bottom: 0.38rem;
+    border-bottom: 1.4px solid var(--ink);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .section-index { font-size: 0.66rem; letter-spacing: 0.05em; }
+  .role-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: baseline;
+    margin-bottom: 0.8rem;
+  }
+  .company {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+  .role { margin: 0.1rem 0 0; color: var(--ink-soft); font-weight: 600; }
+  .meta {
+    margin: 0;
+    color: var(--ink-muted);
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    letter-spacing: 0.035em;
+    white-space: nowrap;
+  }
+  .workstream { margin: 0.82rem 0 0; }
+  .workstream:first-of-type { margin-top: 0; }
+  .workstream-title, .product-title, .stint-title {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 0.83rem;
+    font-weight: 700;
+    letter-spacing: 0.005em;
+  }
+  .product-title a { border-bottom: none; }
+  .product-link {
+    margin: 0.08rem 0 0;
+    color: var(--ink-muted);
+    font-family: var(--sans);
+    font-size: 0.64rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0.28rem 0 0;
+    padding: 0;
+  }
+  li {
+    position: relative;
+    margin: 0 0 0.2rem;
+    padding-left: 0.9rem;
+  }
+  li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0.12rem;
+    color: var(--ink-faint);
+  }
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+  }
+  .product { break-inside: avoid; }
+  .page-two { margin-top: 1.7rem; }
+  .stint { margin-top: 0.8rem; break-inside: avoid; }
+  .stint:first-of-type { margin-top: 0; }
+  .stint-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .stint .meta { flex: 0 0 auto; }
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem 1.6rem;
+  }
+  .skill-line { margin: 0; }
+  .skill-key {
+    display: block;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  .education { margin: 0; }
+  .education strong { color: var(--ink); font-family: var(--sans); }
+  .signoff {
+    margin-top: 1.35rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--hairline);
+    color: var(--ink-muted);
+    font-style: italic;
+    text-align: right;
+  }
+
+  @media (max-width: 680px) {
+    .sheet { width: 100%; margin: 0; padding: 2rem 1.35rem; box-shadow: none; }
+    .masthead { grid-template-columns: 1fr; }
+    .contact { text-align: left; }
+    .products, .skills { grid-template-columns: 1fr; }
+    .role-head, .stint-head { display: block; }
+    .meta { margin-top: 0.15rem; white-space: normal; }
+  }
+
+  @page { size: A4; margin: 10mm 12mm; }
+  @media print {
+    html, body { background: #fff; }
+    body { font-size: 9.35pt; line-height: 1.33; }
+    .sheet { width: auto; margin: 0; padding: 0; box-shadow: none; }
+    a { border-bottom: none; }
+    .masthead { padding-bottom: 2.6mm; gap: 8mm; }
+    .name { font-size: 18pt; }
+    .headline { margin-top: 1mm; font-size: 7.3pt; }
+    .contact { font-size: 6.6pt; line-height: 1.42; }
+    .profile { margin-top: 3.3mm; max-width: none; font-size: 9.65pt; line-height: 1.4; }
+    .section { margin-top: 4.6mm; }
+    .section-title { margin-bottom: 2.4mm; padding-bottom: 1.2mm; font-size: 7pt; }
+    .role-head { margin-bottom: 2mm; }
+    .company { font-size: 9.6pt; }
+    .role { margin-top: 0.3mm; }
+    .meta { font-size: 6.5pt; }
+    .workstream { margin-top: 2.7mm; }
+    .workstream-title, .product-title, .stint-title { font-size: 8.4pt; }
+    .product-link { font-size: 6.2pt; }
+    ul { margin-top: 0.8mm; }
+    li { margin-bottom: 0.7mm; padding-left: 3.4mm; }
+    .products { gap: 7mm; }
+    .page-two { break-before: page; page-break-before: always; margin-top: 0; }
+    .stint { margin-top: 2.6mm; }
+    .skills { gap: 1.6mm 8mm; }
+    .skill-key { font-size: 6.7pt; }
+    .signoff { margin-top: 4mm; padding-top: 2mm; }
+    .masthead, .section-title, .role-head, .workstream-title, .product, .stint, .skills, .education, .signoff {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header>
+    <div class="masthead">
+      <div>
+        <h1 class="name">Patrick McDowell</h1>
+        <p class="headline">AI Product Engineer | Applied AI | Decision Systems</p>
+      </div>
+      <address class="contact">
+        <span>London, United Kingdom &middot; <a href="tel:+447442106062">+44 7442 106062</a></span>
+        <span><a href="mailto:pmcdowellthe3@gmail.com">pmcdowellthe3@gmail.com</a> &middot; <a href="https://patrickmcdowell.dev">patrickmcdowell.dev</a></span>
+        <span><a href="https://www.linkedin.com/in/patrick-mcdowell-iii-3ab98a22/">LinkedIn</a> &middot; <a href="https://github.com/PatTheRatch">GitHub</a></span>
+      </address>
+    </div>
+    <p class="profile">AI product engineer who builds AI and data products from ambiguous problem through prototype, architecture, implementation, and adoption. At Wellington Management, I build internal AI platforms and decision systems at a $1.4T asset manager, including a product used daily by 100+ investment professionals. I work directly with expert users to replace fragmented workflows with tools that become part of how they work.</p>
+  </header>
+
+  <section class="section" aria-labelledby="experience-heading">
+    <h2 class="section-title" id="experience-heading"><span class="section-index">01</span> Experience</h2>
+    <div class="role-head">
+      <div>
+        <h3 class="company">Wellington Management</h3>
+        <p class="role">Investment Science &amp; Risk Analyst</p>
+      </div>
+      <p class="meta">London &middot; 2022-Present</p>
+    </div>
+
+    <article class="workstream">
+      <h4 class="workstream-title">Risk MCP / AI Product Platform</h4>
+      <ul>
+        <li>Designed and built an internal platform on the Model Context Protocol for AI-powered knowledge retrieval, dashboard generation, and reusable AI development workflows.</li>
+        <li>Enabled non-developers to create dashboards and analytical tools with AI, turning a one-person bottleneck into a self-service capability.</li>
+        <li>Rapidly prototype, test, and iterate new capabilities with investment professionals around real workflows and business problems.</li>
+        <li>Help shape the team's AI adoption strategy by prioritizing useful workflows over isolated demonstrations.</li>
+      </ul>
+    </article>
+
+    <article class="workstream">
+      <h4 class="workstream-title">Equity Risk Explorer</h4>
+      <ul>
+        <li>Conceived, designed, and built the firm's flagship equity risk product, now used daily by 100+ portfolio managers, risk managers, client strategists, and senior leaders.</li>
+        <li>Unified holdings, factor exposures, attribution, historical analytics, scenarios, returns, and pre-trade analysis from 6+ internal systems into one workflow.</li>
+        <li>Built and continue to maintain thousands of lines of Python powering seven analytical modules designed around how investors actually analyze portfolios.</li>
+        <li>Expanded adoption beyond the original audience through direct user feedback and fast, iterative product development.</li>
+      </ul>
+    </article>
+
+    <article class="workstream">
+      <h4 class="workstream-title">Decision Systems &amp; Optimization</h4>
+      <ul>
+        <li>Built portfolio optimization and scenario-analysis tools supporting portfolio construction and investment decisions.</li>
+        <li>Designed and backtested a lower-risk optimized strategy that helped win an institutional client pitch and was adopted into client materials.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" aria-labelledby="products-heading">
+    <h2 class="section-title" id="products-heading"><span class="section-index">02</span> Selected Product Work</h2>
+    <div class="products">
+      <article class="product">
+        <h3 class="product-title"><a href="https://fcp.patrickmcdowell.dev">Full Court Press</a></h3>
+        <p class="product-link">fcp.patrickmcdowell.dev</p>
+        <ul>
+          <li>Built an AI-powered newsroom for a fantasy basketball league using ESPN league data to generate weekly sportswriter-style recaps, power rankings, and matchup analysis.</li>
+          <li>Runs for one league today and is being rebuilt for broader ESPN league support.</li>
+        </ul>
+      </article>
+      <article class="product">
+        <h3 class="product-title"><a href="https://sdusmp.patrickmcdowell.dev">Sons &amp; Daughters of the U.S. Middle Passage</a></h3>
+        <p class="product-link">sdusmp.patrickmcdowell.dev</p>
+        <ul>
+          <li>Consulted with a national lineage society to rethink how AI could improve archive search, registrar review, and the workflows around them.</li>
+          <li>Designed a working product mockup with the organization that is now being implemented.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <div class="page-two">
+    <section class="section" aria-labelledby="earlier-heading">
+      <h2 class="section-title" id="earlier-heading"><span class="section-index">03</span> Earlier Experience</h2>
+
+      <article class="stint">
+        <div class="stint-head">
+          <h3 class="stint-title">Senior Financial Analyst &middot; Wellington Management</h3>
+          <p class="meta">London &middot; 2020-2022</p>
+        </div>
+        <ul>
+          <li>Built self-service Tableau reporting used by senior leaders across EMEA and APAC, replacing fragmented Excel workflows and reducing a recurring monthly reporting cycle by roughly 40 analyst-hours.</li>
+          <li>Automated reporting pipelines with SQL and Python so executives could explore assets, revenue, net client growth, and regional performance on demand.</li>
+        </ul>
+      </article>
+
+      <article class="stint">
+        <div class="stint-head">
+          <h3 class="stint-title">Fund Controller &middot; Wellington Management</h3>
+          <p class="meta">Boston &middot; 2017-2020</p>
+        </div>
+        <ul>
+          <li>Built Python tools that generated financial statement disclosures and automated workflows supporting 200+ investment funds.</li>
+          <li>Reduced financial statement review from roughly three hours to 30 minutes through automated validation; the tools were standardized across the team.</li>
+        </ul>
+      </article>
+
+      <article class="stint">
+        <div class="stint-head">
+          <h3 class="stint-title">Financial Analyst &middot; Arrowstreet Capital</h3>
+          <p class="meta">Boston &middot; 2015-2017</p>
+        </div>
+        <ul>
+          <li>Wrote complex SQL for operational and business analytics and automated recurring reporting with SQL, Excel, and Python.</li>
+        </ul>
+      </article>
+
+      <article class="stint">
+        <div class="stint-head">
+          <h3 class="stint-title">Audit Associate &middot; KPMG</h3>
+          <p class="meta">New Jersey &middot; 2012-2015</p>
+        </div>
+        <ul>
+          <li>Taught myself VBA to automate repetitive reconciliations and reduce manual copy-and-paste, establishing the habit of rebuilding a process instead of repeating it.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="skills-heading">
+      <h2 class="section-title" id="skills-heading"><span class="section-index">04</span> Skills</h2>
+      <div class="skills">
+        <p class="skill-line"><span class="skill-key">AI</span>LLMs, Model Context Protocol (MCP), prompt engineering, internal AI products, AI-assisted development</p>
+        <p class="skill-line"><span class="skill-key">Product</span>Problem discovery, rapid prototyping, user research, workflow design, iterative development, product adoption</p>
+        <p class="skill-line"><span class="skill-key">Engineering</span>Python, SQL, Pandas, NumPy, SciPy, Plotly, Git</p>
+        <p class="skill-line"><span class="skill-key">Data &amp; Analytics</span>Tableau, data visualization, optimization, scenario analysis, decision systems</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="education-heading">
+      <h2 class="section-title" id="education-heading"><span class="section-index">05</span> Education</h2>
+      <p class="education"><strong>Rider University</strong> &middot; B.S. in Accounting</p>
+    </section>
+
+    <footer class="signoff">What if there were a better way?</footer>
+  </div>
+</main>
+</body>
+</html>
